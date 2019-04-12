@@ -10,12 +10,28 @@ namespace Longest_word
     {
         static void Main(string[] args)
         {
-            // The code provided will print ‘Hello World’ to the console.
-            // Press Ctrl+F5 (or go to Debug > Start Without Debugging) to run your app.
-            Console.WriteLine("Hello World!");
-            Console.ReadKey();
+            Program a = new Program();
+            Console.WriteLine("the longest word is : ");
+            Console.WriteLine(a.MyFunctionA("Ada Lovelace wrote the first algorithm designed for processing by an Analytical Engine."));
+            Console.ReadLine();
+        }
 
-            // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
+        public String MyFunctionA(string input)
+        {
+            string[] words = input.Split(' ');
+            int wordArrayLength = words.Length;
+            int[] wordsLength = new int[wordArrayLength];
+            foreach (var word in words)
+            {
+            }
+            string currentWord = words[0];
+            string nextWord;
+            for (int y = 0; y < words.Length - 1; y++)
+            {
+                currentWord = words[y];
+                nextWord = words[y + 1];
+            }
+            return currentWord;
         }
     }
 }
